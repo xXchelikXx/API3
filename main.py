@@ -43,7 +43,7 @@ def count_clicks(bitlink, bitly_token):
 def main():
     
     load_dotenv()
-    bitly_token = ''
+    bitly_token = os.environ['BITLY_TOKEN']
     parser = argparse.ArgumentParser(description='Сокращает ссылку, показывает клики по сокращённой ссылке')
     parser.add_argument('--url', type=str, help='Введите ссылку')
     short_link = parser.parse_args()
